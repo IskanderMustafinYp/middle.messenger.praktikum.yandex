@@ -13,5 +13,6 @@ console.log('123', isEmpty(123)); // => true
 console.log('', isEmpty('')); // => true
 console.log('0', isEmpty(0)); // => true.
 
+
 const root = document.querySelector('#root');
 root.textContent = sum(8, -3).toString();
