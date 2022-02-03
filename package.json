@@ -1,0 +1,19 @@
+{
+  "name": "web-chat",
+  "version": "1.0.0",
+  "description": "YP web messenger",
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "main": "index.js",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel index.hbs --open",
+    "build": "parcel build index.hbs"
+  },
+  "devDependencies": {
+    "@anikin/parcel-transformer-handlebars": "1.0.9",
+    "parcel": "2.2.1",
+    "prettier": "2.5.1"
+  }
+}
