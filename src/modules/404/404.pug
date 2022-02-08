@@ -1,0 +1,12 @@
+extends ../../layouts/base.layout.pug
+
+block layoutVars
+    - const META_TITLE = '404';
+
+block head
+    link(rel='stylesheet', href='/src/modules/404/404.css')
+
+block content
+    - const h1 = 'Page not found';
+    h1.main-content= h1
+    a(href='/') Register

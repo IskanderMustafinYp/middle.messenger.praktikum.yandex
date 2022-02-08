@@ -1,0 +1,8 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --colorMain: #578d55;
+    --colorError: rgb(175, 0, 0);
+}

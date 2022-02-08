@@ -1,0 +1,45 @@
+@import '../../global.css';
+@import '../../common/components/components.index.css';
+
+.login-form {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    max-width: 400px;
+}
+
+.login-form__title-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.login-form__title-text {
+    margin-right: 10px;
+}
+
+/* more specific selector to override material icon's CSS */
+.login-form .login-form__title-logo {
+    font-size: 30px;
+    color: var(--colorMain);
+}
+
+.login-form__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-form__control {
+    margin-top: 15px;
+}
+
+.login-form__submit {
+    margin-top: 25px;
+}
+
+.login-form__signup-link {
+    margin-top: 10px;
+    text-align: center;
+}
