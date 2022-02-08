@@ -1,9 +1,9 @@
  {
-    "plugins": {
+    "plugins": {        
+        "postcss-import": true,
         "autoprefixer": {
             "grid": true,
         },
-        "postcss-import": true,
         "postcss-url": true,
         "postcss-custom-properties": true
     }
