@@ -17,10 +17,8 @@ export function range(...args) {
         start = 0;
     }
 
-
     if (step == null) {
         step = end < 0 ? -1 : 1;
-        
     }
 
     const elemsCount = Math.floor(Math.abs((end - start) / (step || 1)));

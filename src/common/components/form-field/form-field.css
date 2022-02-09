@@ -1,26 +1,27 @@
 .form-field {
-    font-size: 13px;
+    font-size: var(--font-size--small);
     font-weight: 600;
-    color: #555;
     display: block;
-}
 
-.form-field__input {
-    padding: 5px 0;
-    font-size: 16px;
-    display: block;
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #757575;
-}
+    &__input {
+        padding: 5px 0;
+        font-size: var(--font-size);
+        display: block;
+        width: 100%;
+        border: none;
+        color: var(--text-color--secondary);
+        border-bottom: 1px solid #757575;
 
-.form-field__input:focus {
-    outline: none;
-}
+        &:focus {
+            outline: none;
+        }
+    }
 
-.form-field__error {
-    display: inline-block;
-    margin-top: 5px;
-    color: var(--colorError);
-    font-size: 13px;
+    &__error {
+        display: inline-block;
+        margin-top: 5px;
+        color: var(--text-color--error);
+        font-size: var(--font-size--small);
+        font-weight: 500;
+    }
 }

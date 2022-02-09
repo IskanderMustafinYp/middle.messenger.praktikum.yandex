@@ -1,6 +1,8 @@
  {
     "plugins": {        
+        "postcss-mixins": true,
         "postcss-import": true,
+        "postcss-nested": true,
         "autoprefixer": {
             "grid": true,
         },

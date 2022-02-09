@@ -1,5 +1,5 @@
 .link {
-    color: #3369f3;
+    color: var(--text-color--link);
     text-decoration: none;
-    font-size: 13px;
+    font-size: var(--font-size--small);
 }
