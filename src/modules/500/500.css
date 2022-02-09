@@ -1,7 +1,7 @@
 @import '../../common/common.css';
 @import '../../common/components/components.index.css';
 
-.container-404 {
+.container-500 {
     display: flex;
     flex-direction: column;
     align-items: center;

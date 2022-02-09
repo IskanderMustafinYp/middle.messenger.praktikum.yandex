@@ -1,0 +1,15 @@
+extends ../../layouts/base.layout.pug
+include ../../common/components/components.index.pug
+
+block layoutVars
+    - const META_TITLE = 'Page 500';
+
+block head
+    link(rel='stylesheet', href='/src/modules/500/500.css')
+
+block content
+    - const h1 = '500';
+    .container-500 
+        h1.container-500__h1= h1
+        h2 Мы уже фиксим
+        +link('Назад к чатам', '/')

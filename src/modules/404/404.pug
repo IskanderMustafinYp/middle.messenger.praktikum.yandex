@@ -1,12 +1,15 @@
 extends ../../layouts/base.layout.pug
+include ../../common/components/components.index.pug
 
 block layoutVars
-    - const META_TITLE = '404';
+    - const META_TITLE = 'Page 404';
 
 block head
     link(rel='stylesheet', href='/src/modules/404/404.css')
 
 block content
-    - const h1 = 'Page not found';
-    h1.main-content= h1
-    a(href='/') Register
+    - const h1 = '404';
+    .container-404 
+        h1.container-404__h1= h1
+        h2 Не туда попали
+        +link('Назад к чатам', '/')
