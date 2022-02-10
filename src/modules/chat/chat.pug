@@ -8,11 +8,10 @@ block head
     link(rel='stylesheet', href='/src/modules/chat/chat.css')
 
 block content
-    - const h1 = 'CHAT page DEPLOT BRANCH TEST';
+    - const h1 = 'Заглушка страницы с чатом';
     h1.main-content= h1
-    - const pets = ['cat', 'dog'];
-    each petName in pets
-        +wm-button(petName)
-
-    a(href='/src/pages/signup.pug') Go to signup
-    a(href='/src/pages/login.pug') Go to login
+    - const pageUrls = ['/src/pages/signup.pug', '/src/pages/login.pug', '/src/pages/500.pug', '/src/pages/404.pug', '/src/pages/update-password.pug', '/src/pages/profile-info.pug'];
+    ul 
+        each pageUrl in pageUrls
+            li 
+                +link(pageUrl, pageUrl)

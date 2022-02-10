@@ -26,5 +26,6 @@
     &__login-link {
         margin-top: 10px;
         text-align: center;
+        font-size: var(--font-size--small);
     }
 }

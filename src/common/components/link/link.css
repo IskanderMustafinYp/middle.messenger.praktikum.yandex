@@ -1,5 +1,4 @@
 .link {
     color: var(--text-color--link);
     text-decoration: none;
-    font-size: var(--font-size--small);
 }

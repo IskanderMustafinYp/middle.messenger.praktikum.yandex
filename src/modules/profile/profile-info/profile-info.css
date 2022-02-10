@@ -1,0 +1,56 @@
+@import '../../../common/common.css';
+@import '../../../common/components/components.index.css';
+
+.profile-info {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+
+    &__name {
+    }
+
+    &__fields-wrapper {
+        list-style-type: none;
+        margin-top: 10px;
+        padding: 0;
+        width: 100%;
+    }
+
+    &__field {
+        margin-top: 10px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid var(--color-grey);
+    }
+
+    &__field-name {
+        display: inline-block;
+        width: 50%;
+        font-weight: 500;
+    }
+
+    &__field-value {
+        display: inline-block;
+        width: 50%;
+        text-align: right;
+        color: var(--text-color--secondary);
+    }
+
+    &__actions-bar {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    &__actions-bar-item {
+        margin-top: 10px;
+    }
+
+    &__action-logout-wrapper {
+        margin-top: 20px;
+        color: var(--text-color--error);
+    }
+}
