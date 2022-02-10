@@ -12,7 +12,7 @@
     "scripts": {
         "start:dev": "parcel ./src/pages/*.pug --open --no-cache",
         "build": "parcel build ./src/pages/*.pug --public-url ./",
-        "start": "node server.js"
+        "start": "npm run build && node ./server.js"
     },
     "dependencies": {
         "express": "4.17.2"
