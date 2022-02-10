@@ -9,9 +9,6 @@
     max-width: 400px;
     margin: auto;
 
-    &__name {
-    }
-
     &__fields-wrapper {
         list-style-type: none;
         margin-top: 10px;
@@ -52,5 +49,11 @@
     &__action-logout-wrapper {
         margin-top: 20px;
         color: var(--text-color--error);
+    }
+
+    &__update-avater-wrapper {
+        position: absolute;
+        padding: 10px;
+
     }
 }

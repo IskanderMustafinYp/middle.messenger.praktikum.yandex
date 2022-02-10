@@ -1,0 +1,10 @@
+.update-avatar-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+
+    &__btn-choose {
+        margin-top: 10px;
+    }
+}
