@@ -1,0 +1,46 @@
+extends ../../../layouts/base.layout.pug
+include ../../../common/components/components.index.pug
+
+block layoutVars
+    - const META_TITLE = 'Update profile page';
+
+block head
+    link(
+        rel='stylesheet',
+        href='/src/modules/profile/update/update-profile.css'
+    )
+
+block content
+    - const h1 = 'Изменить данные';
+
+    .update-profile-form
+        .update-profile-form__title-wrapper 
+            h1.update-profile-form__title-text= h1
+
+        form.update-profile-form__form
+            +form-field('Почта').update-profile-form__control(
+                type='email',
+                name='email'
+            )
+            +form-field('Логин').update-profile-form__control(
+                name='login'
+            )
+            +form-field('Имя').update-profile-form__control(
+                name='first_name'
+            )
+
+            +form-field('Фамилия').update-profile-form__control(
+                name='second_name'
+            )
+            +form-field('Имя в чате').update-profile-form__control(
+                name='display_name'
+            )
+
+            +form-field('Телефон').update-profile-form__control(
+                name='phone'
+            )
+
+            a(href='/src/pages/index.pug')
+                +wm-button('Изменить').update-profile-form__submit(
+                    type='button'
+                )

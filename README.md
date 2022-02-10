@@ -1,6 +1,44 @@
-# Web messenger app
+# Веб мессенджер
 
--   [Deployed app](https://angry-curie-385710.netlify.app/)
--   [Design prototype](https://www.figma.com/file/92LBTPELbrLUx1pg1EqUh0/Messenger-My-Copy)
--   Run project using `npm run start`
--   Build project using `npm run build`
+Онлайн веб мессенджер для переписки.
+Работа над проектом еще ведется.
+
+## Установка
+
+-   Сборка проект `npm run build`
+-   Запуск собранного проекта в production режиме `npm run start`. Проект будет доступен на 3000 порту по умолчанию
+-   Запуск проекта в режиме разработки `npm run start:dev`
+
+### Настройка
+
+-   Вы можете изменить порт, на котором запускается production сборка проекта, указав переменную окружения `PORT`.
+
+    Пример:
+
+    ```
+    export PORT=8000
+    npm run start
+    ```
+
+## Демо
+
+Проект доступен для просмотра по следующей ссылке: [смотреть](https://angry-curie-385710.netlify.app/)
+
+## Макет Figma
+
+Для ознакомления с прототипом дизайна перейдите [сюда](https://www.figma.com/file/92LBTPELbrLUx1pg1EqUh0/Messenger-My-Copy)
+
+## Текущее состояние
+
+Т.к. работа над проектом всё еще ведётся, реализованы не все страницы.
+
+На текущий имплементированны следующие страницы:
+
+-   `/login` - вход
+-   `/signup` - регистрация
+-   `/profile-info` - просмотр данных, доп. действия
+-   `/update-profile` - изменение личных данных
+-   `/update-password` - смена пароля
+-   `/404` - если страница не найдена
+-   `/500` - страница ошибки сервера
+-   `/` или `/index` - ЗАГЛУШКА страницы с чатом
