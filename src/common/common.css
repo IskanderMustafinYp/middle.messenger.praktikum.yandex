@@ -6,9 +6,9 @@
     --text-color--secondary: #999999;
     --text-color--error: rgb(175, 0, 0);
     --text-color--link: #3369f3;
-    --font-size: 1rem;
+    --font-size: 1.05rem;
     --font-size--h1: 2rem;
-    --font-size--small: 0.75rem;
+    --font-size--small: 0.82rem;
 }
 
 html,

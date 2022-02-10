@@ -1,5 +1,6 @@
 @import '../../../common/common.css';
 @import '../../../common/components/components.index.css';
+@import './avatar/update-avatar.css';
 
 .profile-info {
     padding: 3rem;
@@ -54,6 +55,5 @@
     &__update-avater-wrapper {
         position: absolute;
         padding: 10px;
-
     }
 }

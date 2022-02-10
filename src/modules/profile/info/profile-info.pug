@@ -11,6 +11,7 @@ block layoutVars
 
 block head
     link(rel='stylesheet', href='/src/modules/profile/info/profile-info.css')
+    script(src='/src/modules/profile/info/profile-info.js', type='module')
 
 block content
     -
@@ -36,7 +37,7 @@ block content
         .profile-info__actions-bar 
             +link('Изменить данные', '/src/pages/update-profile.pug').profile-info__actions-bar-item
             +link('Изменить пароль', '/src/pages/update-password.pug').profile-info__actions-bar-item
-            +link('Изменить аватар', '/src/pages/index.pug').profile-info__actions-bar-item
+            +link('Изменить аватар', '')#change-avatar.profile-info__actions-bar-item
             +link('Выйти', '/src/pages/index.pug').profile-info__action-logout-wrapper
-    +modal
+    +modal#modal-change-avatar.modal_hidden
         include ./avatar/update-avatar.pug

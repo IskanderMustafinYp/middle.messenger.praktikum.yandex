@@ -1,10 +1,17 @@
 .update-avatar-form {
     display: flex;
+    align-items: center;
     flex-direction: column;
     width: 300px;
-    margin: auto;
+    padding: 10px;
 
     &__btn-choose {
         margin-top: 10px;
+        color: var(--text-color--link);
+        text-decoration: none;
+    }
+
+    &__btn-submit {
+        margin-top: 20px;
     }
 }
