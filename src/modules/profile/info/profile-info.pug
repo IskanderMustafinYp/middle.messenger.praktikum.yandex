@@ -15,7 +15,7 @@ block head
 
 block content
     -
-        //stub for testing, replace with real data later
+        //TODO stub for testing, replace with real data later
         const userInfo = [
             { label: 'Почта', value: 'som@vpetkin.com'}, 
             { label: 'Имя', value: 'Вася'},
@@ -31,7 +31,7 @@ block content
 
         ul.profile-info__fields-wrapper
             each field in userInfo
-                li= val
+                li 
                 +profileField(field.label, field.value)
 
         .profile-info__actions-bar 
@@ -39,5 +39,5 @@ block content
             +link('Изменить пароль', '/src/pages/update-password.pug').profile-info__actions-bar-item
             +link('Изменить аватар', '')#change-avatar.profile-info__actions-bar-item
             +link('Выйти', '/src/pages/index.pug').profile-info__action-logout-wrapper
-    +modal#modal-change-avatar.modal_hidden
+    +modal#modal-change-avatar.modal__hidden
         include ./avatar/update-avatar.pug

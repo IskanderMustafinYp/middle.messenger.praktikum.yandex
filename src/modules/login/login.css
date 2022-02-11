@@ -19,7 +19,7 @@
         font-size: var(--font-size--h1);
     }
 
-    &__title-logo {
+    &__title-icon {
         font-size: 30px;
         color: var(--color-main);
     }
@@ -43,5 +43,3 @@
         font-size: var(--font-size--small);
     }
 }
-
-/* more specific selector to override material icon's CSS */

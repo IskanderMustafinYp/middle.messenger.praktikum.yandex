@@ -4,16 +4,17 @@
     display: block;
 
     &__input {
-        padding: 5px 0;
+        padding: 5px;
         font-size: var(--font-size);
         display: block;
         width: 100%;
         border: none;
         color: var(--text-color--secondary);
-        border-bottom: 1px solid #757575;
-
+        border-bottom: 1px solid var(--text-color);
+        border-radius: 5px 5px 0px 0px;
         &:focus {
             outline: none;
+            background-color: var(--color-main-light);
         }
     }
 
