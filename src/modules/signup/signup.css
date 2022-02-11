@@ -1,0 +1,31 @@
+@import '../../common/common.css';
+@import '../../common/components/components.index.css';
+
+.signup-form {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__control {
+        margin-top: 15px;
+    }
+
+    &__submit {
+        margin-top: 25px;
+    }
+
+    &__login-link {
+        margin-top: 10px;
+        text-align: center;
+        font-size: var(--font-size--small);
+    }
+}

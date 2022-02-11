@@ -1,0 +1,15 @@
+.wm-button {
+    color: white;
+    background-color: var(--color-main);
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    width: 100%;
+
+    &:hover {
+        background-color: rgb(30, 75, 30);
+    }
+}

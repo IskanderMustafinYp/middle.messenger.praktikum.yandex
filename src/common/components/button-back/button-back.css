@@ -1,0 +1,22 @@
+.button-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-main);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: var(--font-size--small);
+
+    &__icon {
+        font-size: 20px;
+    }
+
+    &_floating {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+}

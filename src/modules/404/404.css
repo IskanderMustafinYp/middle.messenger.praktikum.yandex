@@ -1,0 +1,14 @@
+@import '../../common/common.css';
+@import '../../common/components/components.index.css';
+
+.container-404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: inherit;
+
+    &__h1 {
+        margin: 0 0 5px 0;
+    }
+}

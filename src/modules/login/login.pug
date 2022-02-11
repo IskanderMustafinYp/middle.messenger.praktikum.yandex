@@ -1,0 +1,31 @@
+extends ../../layouts/base.layout.pug
+include ../../common/components/components.index.pug
+
+block layoutVars
+    - const META_TITLE = 'Login page';
+
+block head
+    link(rel='stylesheet', href='/src/modules/login/login.css')
+
+block content
+    - const h1 = 'Вход';
+
+    .login-form
+        .login-form__title-wrapper 
+            h1.login-form__title-text= h1
+            span.login-form__title-icon.material-icons login
+
+        form.login-form__form
+            +form-field('Логин').login-form__control(
+                placeholder='введите логин',
+                name='login'
+            )
+            +form-field('Пароль').login-form__control(
+                placeholder='введите пароль',
+                type='password',
+                name='password'
+            )
+
+            a(href='/src/pages/index.pug')
+                +wm-button('Войти').login-form__submit(type='button')
+        +link('Нет аккаунта?', '/src/pages/signup.pug').login-form__signup-link

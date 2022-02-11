@@ -1,0 +1,43 @@
+extends ../../../layouts/base.layout.pug
+include ../../../common/components/components.index.pug
+
+mixin profileField(name, val)
+    li.profile-info__field
+        span.profile-info__field-name= name
+        span.profile-info__field-value= val
+
+block layoutVars
+    - const META_TITLE = 'Profile info page';
+
+block head
+    link(rel='stylesheet', href='/src/modules/profile/info/profile-info.css')
+    script(src='/src/modules/profile/info/profile-info.js', type='module')
+
+block content
+    -
+        //TODO stub for testing, replace with real data later
+        const userInfo = [
+            { label: 'Почта', value: 'som@vpetkin.com'}, 
+            { label: 'Имя', value: 'Вася'},
+            { label: 'Фамилия', value:'Petkin'},
+            { label: 'Логин', value:'vpetkin'},
+            { label: 'Имя в чате', value: 'TEST'},
+            { label: 'Телефон', value: '7903000000'},
+        ];
+
+    +buttonback('/src/pages/index.pug').button-back_floating
+    .profile-info
+        h2.profile-info__name= userInfo[1].value
+
+        ul.profile-info__fields-wrapper
+            each field in userInfo
+                li 
+                +profileField(field.label, field.value)
+
+        .profile-info__actions-bar 
+            +link('Изменить данные', '/src/pages/update-profile.pug').profile-info__actions-bar-item
+            +link('Изменить пароль', '/src/pages/update-password.pug').profile-info__actions-bar-item
+            +link('Изменить аватар', '')#change-avatar.profile-info__actions-bar-item
+            +link('Выйти', '/src/pages/index.pug').profile-info__action-logout-wrapper
+    +modal#modal-change-avatar.modal__hidden
+        include ./avatar/update-avatar.pug

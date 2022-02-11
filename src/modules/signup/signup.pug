@@ -1,0 +1,50 @@
+extends ../../layouts/base.layout.pug
+include ../../common/components/components.index.pug
+
+block layoutVars
+    - const META_TITLE = 'Signup page';
+
+block head
+    link(rel='stylesheet', href='/src/modules/signup/signup.css')
+
+block content
+    - const h1 = 'Зарегестрироваться';
+
+    .signup-form
+        h1= h1
+
+        form.signup-form__form
+            +form-field('Имя').signup-form__control(
+                placeholder='введите имя',
+                name='first_name'
+            )
+            +form-field('Фамилия').signup-form__control(
+                placeholder='введите фамилию',
+                name='second_name'
+            )
+
+            +form-field('Логин').signup-form__control(
+                placeholder='введите логин',
+                name='login'
+            )
+            +form-field('Почта').signup-form__control(
+                placeholder='введите почту',
+                name='email'
+            )
+            +form-field('Пароль').signup-form__control(
+                placeholder='введите пароль',
+                type='password',
+                name='password'
+            )
+
+            +form-field('Телефон').signup-form__control(
+                placeholder='введите телефон',
+                name='phone'
+            )
+
+            a(href='/src/pages/index.pug')
+                +wm-button('Зарегистрироваться').signup-form__submit(
+                    type='button'
+                )
+
+        +link('Войти', '/src/pages/login.pug').signup-form__login-link 

@@ -1,0 +1,14 @@
+ {
+    "plugins": {        
+        "postcss-mixins": true,
+        "postcss-import": true,
+        "postcss-nested": true,
+        "autoprefixer": {
+            "grid": true,
+        },
+        "postcss-url": true,
+        "postcss-custom-properties": {
+            preserve: false
+        }
+    }
+}
