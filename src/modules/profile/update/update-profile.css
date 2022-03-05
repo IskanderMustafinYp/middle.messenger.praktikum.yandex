@@ -2,12 +2,11 @@
 @import '../../../common/components/components.index.css';
 
 .update-profile-form {
-    margin-top: 3rem;
+    margin-top: 3rem auto 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 400px;
-    margin: auto;
 
     &__form {
         display: flex;

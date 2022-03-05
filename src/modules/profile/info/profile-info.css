@@ -33,7 +33,7 @@
         display: inline-block;
         width: 50%;
         text-align: right;
-        color: var(--text-color--secondary);
+        color: var(--text-color-secondary);
     }
 
     &__actions-bar {
@@ -49,7 +49,7 @@
 
     &__action-logout-wrapper {
         margin-top: 20px;
-        color: var(--text-color--error);
+        color: var(--text-color-error);
     }
 
     &__update-avater-wrapper {

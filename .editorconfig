@@ -1,0 +1,18 @@
+# Some notes for me in future:
+# To make prettier work with edito config we need to specify {"editorConfig": true} in .prettierrc
+# Also, we need to remove duplicated rules from .prettierrc (look below): https://prettier.io/docs/en/api.html#prettierresolveconfigfilepath-options
+# Currently, the following EditorConfig properties are supported:
+# end_of_line
+# indent_style
+# indent_size/tab_width
+# max_line_length
+
+root = true
+
+[*]
+# Для всех файлов используем unix-совместимые переносы строк
+end_of_line = lf #"endOfLine" in prettier
+indent_style = space #"useTabs" in prettier 
+indent_size = 4 # or "tab_width" is "tabWidth" in prettier
+#max_line_length # is analog of "printWidth" in prettier
+[*.{js,ts}]

@@ -3,5 +3,5 @@ export function sum(...args) {
         throw Error('sum required at least 1 argument');
     }
 
-    return args.reduce((result, current) => result + current, 0);
+    return args.reduce((result: any, current: any) => result + current, 0);
 }

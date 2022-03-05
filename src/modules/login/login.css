@@ -2,12 +2,11 @@
 @import '../../common/components/components.index.css';
 
 .login-form {
-    margin-top: 3rem;
+    margin-top: 3rem auto 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 400px;
-    margin: auto;
 
     &__title-wrapper {
         display: flex;
@@ -16,7 +15,7 @@
 
     &__title-text {
         margin-right: 10px;
-        font-size: var(--font-size--h1);
+        font-size: var(--font-size-h1);
     }
 
     &__title-icon {
@@ -29,6 +28,7 @@
         flex-direction: column;
         width: 100%;
     }
+
     &__control {
         margin-top: 15px;
     }
@@ -40,6 +40,6 @@
     &__signup-link {
         margin-top: 10px;
         text-align: center;
-        font-size: var(--font-size--small);
+        font-size: var(--font-size-small);
     }
 }

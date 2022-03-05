@@ -1,0 +1,32 @@
+/* Few notes for me for future: 
+    - difference between plugins and extends: https://stackoverflow.com/questions/53189200/whats-the-difference-between-plugins-and-extends-in-eslint
+    - eslint-config-prettier - ONLY DISABLES all rules conflicting with prettier
+    - eslint-plugin-prettier - provides 'plugin:prettier/recommended' config that we used in "extends"
+      It automatically enables "eslint-config-prettier" and adds some more rulesets
+
+    - we can use "parserOptions: { project: ['./tsconfig.json'] }" in conjuction with "plugin:@typescript-eslint/recommended-requiring-type-checking"
+        It will enable rulesets added by @typescript-eslint that will do additional type checks 
+*/
+{
+    "root": true, // [By default] ESLint will look for configuration files in all parent folders up to the root directory. ESLint will stop looking in parent folders once it finds a configuration with "root": true. - https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats
+
+    "parser": "@typescript-eslint/parser",
+    //"parserOptions": { "project": ["./tsconfig.json"] },
+    "extends": [
+        "airbnb",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:prettier/recommended" // always should be last. More info here:  https://github.com/prettier/eslint-plugin-prettier#recommended-configuration
+    ],
+    "env": {
+        "browser": true
+    },
+    "plugins": ["@typescript-eslint"],
+
+    "rules": {
+        "import/prefer-default-export": 0 // 0 - off, 1 - warn, 2 - error
+    },
+
+    // ESLint always follows a couple of implicit ignore rules: node_modules/ and dot-files (except for .eslintrc.*), as well as dot-folders and their contents
+    "ignorePatterns": ["node_modules", "build", "dist", "public"]
+}

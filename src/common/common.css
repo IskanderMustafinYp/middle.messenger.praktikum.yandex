@@ -3,17 +3,17 @@
     --color-main-light: #f2fde4;
     --color-grey: #efefef;
     --text-color: #1e1e1e;
-    --text-color--secondary: #999999;
-    --text-color--error: rgb(175, 0, 0);
-    --text-color--link: #3369f3;
+    --text-color-secondary: #999;
+    --text-color-error: rgb(175 0 0);
+    --text-color-link: #3369f3;
     --font-size: 1.05rem;
-    --font-size--h1: 2rem;
-    --font-size--small: 0.82rem;
+    --font-size-h1: 2rem;
+    --font-size-small: 0.82rem;
 }
 
 html,
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: var(--font-size);
     color: var(--text-color);
     margin: 0;
@@ -26,5 +26,5 @@ main {
 }
 
 h1 {
-    font-size: var(--font-size--h1);
+    font-size: var(--font-size-h1);
 }

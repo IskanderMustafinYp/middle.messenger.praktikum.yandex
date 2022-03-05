@@ -9,6 +9,6 @@
     min-height: inherit;
 
     &__h1 {
-        margin: 0 0 5px 0;
+        margin: 0 0 5px;
     }
 }

@@ -10,6 +10,6 @@
     width: 100%;
 
     &:hover {
-        background-color: rgb(30, 75, 30);
+        background-color: rgb(30 75 30);
     }
 }

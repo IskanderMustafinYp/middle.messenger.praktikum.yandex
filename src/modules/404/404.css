@@ -7,8 +7,10 @@
     align-items: center;
     justify-content: center;
     min-height: inherit;
+    color: #999;
 
     &__h1 {
-        margin: 0 0 5px 0;
+        margin: 0 0 5px;
+        color: #999;
     }
 }

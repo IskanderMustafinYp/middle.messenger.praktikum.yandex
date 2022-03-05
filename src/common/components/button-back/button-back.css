@@ -8,7 +8,7 @@
     background-color: var(--color-main);
     border-radius: 50%;
     text-decoration: none;
-    font-size: var(--font-size--small);
+    font-size: var(--font-size-small);
 
     &__icon {
         font-size: 20px;
