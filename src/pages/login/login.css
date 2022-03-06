@@ -1,8 +1,5 @@
-@import '../../common/common.css';
-@import '../../common/components/components.index.css';
-
 .login-form {
-    margin-top: 3rem auto 0 auto;
+    margin: 3rem auto 0;
     display: flex;
     flex-direction: column;
     align-items: center;

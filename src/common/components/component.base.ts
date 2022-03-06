@@ -2,7 +2,7 @@ import { nanoid } from 'nanoid';
 import { EventBus } from '../utils/event-bus';
 
 export abstract class ComponentBase<
-    TProps extends Record<string | symbol, any>,
+    TProps extends Record<string | symbol, any> = {},
 > {
     static EVENTS = {
         INIT: 'init',
@@ -23,7 +23,7 @@ export abstract class ComponentBase<
     constructor(propsAndChildren: any = {}) {
         this.eventBus = new EventBus();
 
-        const { props, children } = this.getChildren(propsAndChildren);
+        const { props, children } = this._parseProps(propsAndChildren);
 
         this.children = children;
 
@@ -48,7 +48,7 @@ export abstract class ComponentBase<
         this.eventBus.emit(ComponentBase.EVENTS.INIT);
     }
 
-    getChildren(propsAndChildren: any) {
+    private _parseProps(propsAndChildren: any) {
         const children: any = {};
         const props: any = {};
 
@@ -70,7 +70,7 @@ export abstract class ComponentBase<
 
     protected initChildren() {}
 
-    init() {
+    private init() {
         this.eventBus.emit(ComponentBase.EVENTS.FLOW_RENDER);
     }
 
@@ -85,6 +85,7 @@ export abstract class ComponentBase<
     }
 
     _componentDidUpdate(oldProps: TProps, newProps: TProps) {
+        this._render();
         if (this.componentDidUpdate(oldProps, newProps)) {
             this.eventBus.emit(ComponentBase.EVENTS.FLOW_RENDER);
         }
@@ -138,15 +139,18 @@ export abstract class ComponentBase<
                 const value = target[prop];
                 return typeof value === 'function' ? value.bind(target) : value;
             },
+
             set(target: any, prop, value) {
+                const oldProps = { ...target };
                 target[prop] = value;
                 self.eventBus.emit(
                     ComponentBase.EVENTS.FLOW_CDU,
-                    { ...target },
+                    oldProps,
                     target,
                 );
                 return true;
             },
+
             deleteProperty() {
                 throw new Error('Нет доступа');
             },

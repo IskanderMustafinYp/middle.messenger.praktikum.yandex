@@ -1,0 +1,12 @@
+.login-form
+    .login-form__title-wrapper 
+        h1.login-form__title-text= 'Вход'
+        span.login-form__title-icon.material-icons login
+
+    form.login-form__form
+        | !{ inputLogin }
+        | !{ inputPassword }
+
+        a(href='/src/pages/index.pug')
+            | !{ submit }
+    | !{ signupLink }

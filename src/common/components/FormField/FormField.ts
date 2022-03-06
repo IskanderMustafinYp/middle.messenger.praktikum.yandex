@@ -1,12 +1,16 @@
+import { ICommonComponentProps } from '../common-component-props.interface';
 import { ComponentBase } from '../component.base';
-import template from '../wm-button/wm-button.mixin.pug';
+import './form-field.css';
+import template from './form-field.pug';
 
-interface IFormFieldProps {
+interface IFormFieldProps extends ICommonComponentProps {
     label?: string;
     type?: HTMLInputElement['type'];
-    className?: HTMLInputElement['className'];
     name?: HTMLInputElement['name'];
     placeholder?: HTMLInputElement['placeholder'];
+    minlength?: HTMLInputElement['minLength'];
+    maxlength?: HTMLInputElement['maxLength'];
+    required?: HTMLInputElement['required'];
     events?: Record<string, (...args: any[]) => void>;
 }
 

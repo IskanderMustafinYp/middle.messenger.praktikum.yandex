@@ -1,8 +1,10 @@
-label.form-field(class!=attributes.class)= label
+label.form-field(class!=className)!= label
     input.form-field__input(
-        id!=attributes.id,
-        name!=attributes.name,
-        type!=attributes.type,
-        placeholder!=attributes.placeholder
+        id!=id,
+        minlength!=minlength,
+        maxlength!=maxlength,
+        name!=name,
+        type!=type,
+        placeholder!=placeholder
     )
     //-span.form-field__error Some error text 

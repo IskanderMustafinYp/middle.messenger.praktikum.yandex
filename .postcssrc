@@ -7,8 +7,6 @@
             "grid": true,
         },
         "postcss-url": true,
-        "postcss-custom-properties": {
-            preserve: false
-        }
+        "postcss-custom-properties": true
     }
 }

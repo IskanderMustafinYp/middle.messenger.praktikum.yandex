@@ -1,0 +1,29 @@
+.form-field {
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    display: block;
+
+    &__input {
+        padding: 5px;
+        font-size: var(--font-size);
+        display: block;
+        width: 100%;
+        border: none;
+        color: var(--text-color-secondary);
+        border-bottom: 1px solid var(--text-color);
+        border-radius: 5px 5px 0 0;
+
+        &:focus {
+            outline: none;
+            background-color: var(--color-main-light);
+        }
+    }
+
+    &__error {
+        display: inline-block;
+        margin-top: 5px;
+        color: var(--text-color-error);
+        font-size: var(--font-size-small);
+        font-weight: 500;
+    }
+}
